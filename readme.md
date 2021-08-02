@@ -33,6 +33,7 @@ npm install express body-parser dot-env mysql2 nodemon
 
 **.env example**
 ```
+HOST=
 DB_USERNAME=
 DB_PASSWORD=
 ```

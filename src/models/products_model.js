@@ -3,7 +3,7 @@ const db = require('../config/db');
 const productsModel = {
   getList: (search, field, typeSort, limit, offset) => new Promise((resolve, reject) => {
     db.query(
-      `SELECT products.id, products.name, products.image, size.size, size.price, products.description, products.stock, products.discount, category.name, products.delivery_days, products.delivery_time FROM products INNER JOIN size_products AS size ON size.code_products = products.id INNER JOIN category ON products.category_id=category.id WHERE products.name LIKE '%${search}%' ORDER BY ${field} ${typeSort} LIMIT ${limit} OFFSET ${offset}`,
+      `SELECT products.id, products.name, products.image, size.size, size.price, products.description, products.stock, products.discount, category.name AS category, products.delivery_days, products.delivery_time FROM products INNER JOIN size_products AS size ON size.code_products = products.id INNER JOIN category ON products.category_id=category.id WHERE products.name LIKE '%${search}%' ORDER BY ${field} ${typeSort} LIMIT ${limit} OFFSET ${offset}`,
       (err, result) => {
         if (err) {
           reject(err);
@@ -26,7 +26,7 @@ const productsModel = {
     );
   }),
   getDetail: (id) => new Promise((resolve, reject) => {
-    db.query(`SELECT * FROM products WHERE id=${id}`, (err, result) => {
+    db.query(`SELECT products.id, products.name, products.image, size.size, size.price, products.description, products.stock, products.discount, category.name, products.delivery_days, products.delivery_time FROM products LEFT JOIN size_products AS size ON size.code_products = products.id INNER JOIN category ON products.category_id=category.id WHERE products.id=${id}`, (err, result) => {
       if (err) {
         reject(err);
       } else {

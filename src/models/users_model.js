@@ -57,9 +57,9 @@ const usersModel = {
       }
     });
   }),
-  update: (id, body) => new Promise((resolve, reject) => {
+  update: (id, body, hash) => new Promise((resolve, reject) => {
     db.query(
-      `UPDATE users SET email="${body.email}", password="${body.password}", phone=${body.phone}, picture="${body.picture}", name="${body.name}", address="${body.address}", first_name="${body.first_name}", last_name="${body.last_name}", date="${body.date}", gender="${body.gender}" WHERE id="${id}"`,
+      `UPDATE users SET email="${body.email}", password="${hash}", phone=${body.phone}, picture="${body.picture}", name="${body.name}", address="${body.address}", first_name="${body.first_name}", last_name="${body.last_name}", date="${body.date}", gender="${body.gender}" WHERE id="${id}"`,
       (err, result) => {
         if (err) {
           reject(err);

@@ -3,14 +3,16 @@ const bodyParser = require('body-parser');
 const usersRouter = require('./src/routers/users');
 const productsRouter = require('./src/routers/products');
 const categoryRouter = require('./src/routers/category');
+const sizeRouter = require('./src/routers/size');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(usersRouter);
 app.use(productsRouter);
 app.use(categoryRouter);
+app.use(sizeRouter);
 
-app.listen(5000, () => {
+app.listen(3000, () => {
   // eslint-disable-next-line no-console
-  console.log('Service running on port 3306');
+  console.log('Service running on port 3000');
 });

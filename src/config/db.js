@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 const mysql = require('mysql2');
-const { DB_USERNAME, DB_PASSWORD } = require('../helpers/env');
+const { HOST, DB_USERNAME, DB_PASSWORD } = require('../helpers/env');
 
 const db = mysql.createConnection({
-  host: '',
+  host: HOST,
   user: DB_USERNAME,
   password: DB_PASSWORD,
   database: 'db_coffee_shop',

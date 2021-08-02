@@ -91,8 +91,9 @@ const users = {
     try {
       const { id } = req.params;
       const { body } = req;
+      const hash = bcrypt.hashSync(body.password, 10);
       usersModel
-        .update(id, body)
+        .update(id, body, hash)
         .then((result) => {
           success(res, result, 200, 'Update data users success');
         })
