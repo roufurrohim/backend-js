@@ -1,0 +1,598 @@
+{
+	"info": {
+		"_postman_id": "c4243aa3-65c8-415e-9394-fc2cab0308c2",
+		"name": "backend2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get list products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "123abc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "3.86.231.74:3000/products?limit=10",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create data products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Choco Oreo\",\n    \"image\": \"img6.jpg\",\n    \"description\": \"Choco Oreo delicious\",\n    \"stock\": \"11\",\n    \"discount\": \"0\",\n    \"category_id\": \"2\",\n    \"delivery_days\": \"Sunday\",\n    \"delivery_time\": \"1 - 6PM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "54.236.187.98:3000/products",
+					"host": [
+						"54",
+						"236",
+						"187",
+						"98"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get details products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/products/8",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update products",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Choco Oreo\",\n    \"image\": \"img8.jpg\",\n    \"description\": \"Choco Oreo delicious\",\n    \"stock\": \"20\",\n    \"discount\": \"10\",\n    \"category\": \"2\",\n    \"delivery_days\": \"Sunday\",\n    \"delivery_time\": \"1 - 6PM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/products/8",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete products",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/products/8",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get data users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "123abc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "3.86.231.74:3000/users",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get details user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "123abc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "3.86.231.74:3000/users/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "123abc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"rouf@rohim.com\",\n    \"password\": \"987abc\",\n    \"phone\": \"8439170\",\n    \"picture\": \"img6.jpg\",\n    \"name\": \"rouf\",\n    \"address\": \"Hoeger Mall Street no 92\",\n    \"first_name\": \"Patricia\",\n    \"last_name\": \"Lebsack\",\n    \"date\": \"1996-08-06\",\n    \"gender\": \"Male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/users",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"rouf@rohim.com\",\n    \"password\": \"987abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/login",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update users",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "123abc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"rouf@rohim.com\",\n    \"password\": \"987abc\",\n    \"phone\": \"8439170\",\n    \"picture\": \"img6.jpg\",\n    \"name\": \"siro\",\n    \"address\": \"Hoeger Mall Street no 92\",\n    \"first_name\": \"Patricia\",\n    \"last_name\": \"Lebsack\",\n    \"date\": \"1996-08-06\",\n    \"gender\": \"Male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/users/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete users",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "123abc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "3.86.231.74:3000/users/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get data category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/category?limit=5",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"category"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get details category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/category/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"category",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create data category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Favorite\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/category",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update category",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"fav\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/category/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"category",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/category/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"category",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get data size",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/size?limit=8",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"size"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get details size",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "54.236.187.98:3000/size/1",
+					"host": [
+						"54",
+						"236",
+						"187",
+						"98"
+					],
+					"port": "3000",
+					"path": [
+						"size",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add size",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"size\": \"L\",\n    \"price\": \"27000\",\n    \"code_products\": \"7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "54.236.187.98:3000/size",
+					"host": [
+						"54",
+						"236",
+						"187",
+						"98"
+					],
+					"port": "3000",
+					"path": [
+						"size"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update size",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"size\": \"XL\",\n    \"price\": \"34000\",\n    \"code_products\": \"5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "3.86.231.74:3000/size/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"size",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete size",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "3.86.231.74:3000/size/6",
+					"host": [
+						"3",
+						"86",
+						"231",
+						"74"
+					],
+					"port": "3000",
+					"path": [
+						"size",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
