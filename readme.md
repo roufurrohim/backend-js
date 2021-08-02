@@ -37,3 +37,16 @@ HOST=
 DB_USERNAME=
 DB_PASSWORD=
 ```
+
+**Flowchart Program**
+
+[flowchart](https://github.com/roufurrohim/backend-js/tree/master/img)
+
+**Relasi Table Database**
+
+[click me](https://github.com/roufurrohim/backend-js/blob/master/img/tabel-relasi-db_coffee_shop.png)
+
+
+**Sample Database**
+
+[database](https://github.com/roufurrohim/backend-js/blob/master/coffee-shop.sql)
