@@ -5,7 +5,7 @@ Cara instalasi sebagai berikut:
 - Clone repository ini
 
 ```
-https://github.com/roufurrohim/backend-with-nodejs.git
+https://github.com/roufurrohim/backend-js.git
 ```
 
 - Instalasi depedensi :
