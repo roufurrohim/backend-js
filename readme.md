@@ -44,7 +44,7 @@ DB_PASSWORD=
 
 **Relasi Table Database**
 
-[click me](https://github.com/roufurrohim/backend-js/blob/master/img/tabel-relasi-db_coffee_shop.png)
+[click me](https://github.com/roufurrohim/backend-js/blob/master/img/relasi-db-coffee-shop.png)
 
 
 **Sample Database**
