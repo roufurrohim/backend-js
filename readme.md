@@ -11,7 +11,7 @@ https://github.com/roufurrohim/backend-js.git
 - Instalasi depedensi :
 
 ```
-npm install express body-parser dot-env mysql2 nodemon
+npm install express body-parser dot-env mysql2 nodemon bcrypt
 ```
 
 ## API DOCUMENTATION
