@@ -8,7 +8,17 @@ const response = {
     };
     res.json(resp);
   },
-  resLogin: (res, message) => {
+  sucLog: (res, data, code, message) => {
+    const resp = {
+      success: true,
+      data,
+      code,
+      message,
+      token: '123abc',
+    };
+    res.json(resp);
+  },
+  errLogin: (res, message) => {
     const r = {
       message,
     };

@@ -77,7 +77,7 @@ const size = {
       sizeModel
         .destroy(id)
         .then((result) => {
-          success(res, result, 200, 'Delete data product success');
+          success(res, result, 200, 'Delete data size success');
         })
         .catch((err) => {
           failed(res, 404, err);

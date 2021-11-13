@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const usersModel = require('../models/users_model');
-const { success, failed, resLogin } = require('../helpers/response');
+const {
+  success, failed, errLogin, sucLog,
+} = require('../helpers/response');
 
 const users = {
   getList: (req, res) => {
@@ -69,14 +71,14 @@ const users = {
         .login(body)
         .then((result) => {
           if (result <= 0) {
-            resLogin(res, 'Email salah');
+            errLogin(res, 'Email salah');
           } else {
             const hash = result[0].password;
             const pwd = bcrypt.compareSync(body.password, hash);
             if (pwd === true) {
-              success(res, result, 200, 'Login success');
+              sucLog(res, result, 200, 'Login success');
             } else {
-              resLogin(res, 'Password salah');
+              errLogin(res, 'Password salah');
             }
           }
         })
